@@ -8,13 +8,11 @@ Daniel DiPietro, Shiying Xiong, Bo Zhu (2020)
 
 Sparse Symplectically Integrated Neural Networks (SSINNs) are a novel model for learning Hamiltonian dynamical systems from data. SSINNs combine fourth-order symplectic integration with a learned parameterization of the Hamiltonian obtained using sparse regression through a mathematically elegant function space. This allows for interpretable models that incorporate symplectic inductive biases and have low memory requirements. SSINNs often successfully converge to true governing equations from highly limited and noisy data.
 
+![ssinn-henon-heiles.png](henon_heiles_graphic.png)
+
 ## Usage
 
-SSINNs may be applied to a variety of tasks using the code in `function_spaces.py`, `integrators.py`, and `ssinn.py`.
-
-## Assembling an SSINN
-
-SSINNs can be readily applied to novel dynamical systems.
+Each folder contains a corresponding `data.py`, which generates the necessary dataset in the working directory, and `train.py`, which trains the SSINN on the given dataset. If the dataset is not in the directory when `train.py` is executed, it will call `data.py` and generate the dataset.
 
 ## Dependencies
 * PyTorch
